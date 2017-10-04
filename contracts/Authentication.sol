@@ -14,11 +14,11 @@ contract Authentication is Killable {
   function login() constant returns (bytes32) {
     // Check if user exists.
     // If yes, return user.
-    // If no, throw.
+    // If no, revert().
 
     if (users[msg.sender].name == 0x0)
     {
-        throw;
+        revert();
     }
 
     return (users[msg.sender].name);
@@ -33,7 +33,7 @@ contract Authentication is Killable {
 
     if (name == 0x0)
     {
-        throw;
+        revert();
     }
 
     if (users[msg.sender].name == 0x0)
@@ -51,7 +51,7 @@ contract Authentication is Killable {
 
     if (name == 0x0)
     {
-        throw;
+        revert();
     }
 
     if (users[msg.sender].name != 0x0)
@@ -61,6 +61,6 @@ contract Authentication is Killable {
         return (users[msg.sender].name);
     }
 
-    throw;
+    revert();
   }
 }
