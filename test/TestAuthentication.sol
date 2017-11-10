@@ -1,4 +1,4 @@
-pragma solidity ^0.4.2;
+pragma solidity 0.4.18;
 
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
@@ -6,7 +6,7 @@ import "../contracts/Authentication.sol";
 
 contract TestAuthentication {
 
-  function testUserCanSignUpAndLogin() {
+  function testUserCanSignUpAndLogin() public {
     Authentication authentication = Authentication(DeployedAddresses.Authentication());
 
     authentication.signup('testuser');

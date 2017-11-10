@@ -1,4 +1,4 @@
-pragma solidity ^0.4.2;
+pragma solidity 0.4.18;
 
 import './zeppelin/lifecycle/Killable.sol';
 
@@ -25,8 +25,9 @@ contract Authentication is Killable {
     _;
   }
 
-  function login() constant
+  function login()
   public
+  view
   onlyExistingUser
   returns (bytes32) {
     return (users[msg.sender].name);
