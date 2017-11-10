@@ -25,8 +25,9 @@ contract Authentication is Killable {
     _;
   }
 
-  function login() constant
+  function login()
   public
+  view
   onlyExistingUser
   returns (bytes32) {
     return (users[msg.sender].name);
