@@ -6,7 +6,7 @@ import "../contracts/Authentication.sol";
 
 contract TestAuthentication {
 
-  function testUserCanSignUpAndLogin() {
+  function testUserCanSignUpAndLogin() public {
     Authentication authentication = Authentication(DeployedAddresses.Authentication());
 
     authentication.signup('testuser');
