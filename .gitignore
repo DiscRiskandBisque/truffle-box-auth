@@ -15,3 +15,4 @@ build_webpack
 .env
 npm-debug.log
 .truffle-solidity-loader
+package-lock.json
