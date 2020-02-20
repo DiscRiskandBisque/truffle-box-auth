@@ -11,8 +11,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onProfileFormSubmit: (name) => {
-      event.preventDefault();
-
       dispatch(updateUser(name))
     }
   }
